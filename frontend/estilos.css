@@ -1,0 +1,341 @@
+
+
+/* ==========================================================================
+   CSS EXCLUSIVO PARA EL PANEL DE ADMINISTRACIÓN (ADMIN DASHBOARD)
+   ========================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfbf7; /* Un fondo crema extremadamente claro para descansar la vista */
+    color: #2b1a0a;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   1. BARRA LATERAL DE NAVEGACIÓN (SIDEBAR)
+   ========================================================================== */
+.admin-sidebar {
+    width: 260px;
+    background-color: #2b1a0a; /* Tu café oscuro elegante */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-logo {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(243, 229, 200, 0.2); /* Línea sutil crema */
+}
+
+.sidebar-logo h2 {
+    font-size: 1.5rem;
+    color: #f3e5c8; /* Tu crema */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin-top: 30px;
+}
+
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: #dacbcb;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+/* Estado activo o al pasar el mouse */
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    background-color: #8d4700; /* Tu café intermedio */
+    color: white;
+    padding-left: 35px; /* Efecto dinámico de desplazamiento */
+}
+
+.sidebar-logout {
+    margin-top: auto; /* Empuja el botón de cerrar sesión al fondo */
+    border-top: 1px solid rgba(243, 229, 200, 0.2);
+    padding-top: 15px;
+}
+
+.sidebar-logout a {
+    color: #f1934f !important; /* Tu naranja distintivo */
+}
+
+.sidebar-logout a:hover {
+    background-color: #cd3d3d !important; /* Rojo sutil de advertencia al salir */
+    color: white !important;
+}
+
+
+.admin-container {
+    margin-left: 260px; /* Deja espacio exacto para la sidebar fija */
+    width: calc(100% - 260px);
+    padding: 40px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #e6d5b3;
+    padding-bottom: 15px;
+}
+
+.admin-header h1 {
+    color: #4b2c0c;
+    font-size: 2.2rem;
+}
+
+.admin-user-info {
+    font-weight: bold;
+    color: #8d4700;
+    background-color: #f3e5c8;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-stat {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 5px solid #8d4700; /* Detalle de color al borde */
+    transition: transform 0.2s;
+}
+
+.card-stat:hover {
+    transform: translateY(-3px);
+}
+
+/* Variaciones de color para las tarjetas */
+.card-stat.productos { border-left-color: #8d4700; }
+.card-stat.ventas { border-left-color: #f1934f; }
+.card-stat.mensajes { border-left-color: #2b1a0a; }
+
+.card-stat h3 {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-stat .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2b1a0a;
+}
+
+
+.table-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow-x: auto; /* Permite scroll horizontal si la tabla es muy grande */
+}
+
+.table-title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-title-area h2 {
+    color: #2b1a0a;
+    font-size: 1.4rem;
+}
+
+/* Tabla nativa */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f3e5c8;
+    color: #4b2c0c;
+    font-weight: bold;
+    padding: 14px;
+    font-size: 1rem;
+    border-bottom: 2px solid #e6d5b3;
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Filas alternas */
+.admin-table tbody tr:nth-child(even) {
+    background-color: #faf8f5;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #f5eedc; /* Ilumina la fila al pasar el mouse */
+}
+
+/* Miniaturas de imágenes de productos en la tabla */
+.img-tabla {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   5. BOTONES DE ACCIÓN (Añadir, Editar, Eliminar)
+   ========================================================================== */
+.btn-admin {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+/* Botón principal de agregar */
+.btn-nuevo {
+    background-color: #f1934f;
+    color: white;
+}
+
+.btn-nuevo:hover {
+    background-color: #d8762e;
+}
+
+/* Botones de acción dentro de las tablas */
+.btn-editar {
+    background-color: #8d4700;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #4b2c0c;
+}
+
+.btn-eliminar {
+    background-color: #cd3d3d;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+}
+
+.btn-eliminar:hover {
+    background-color: #a62626;
+}
+
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 70px; /* Colapsa la barra lateral */
+    }
+    
+    .sidebar-logo h2, 
+    .sidebar-menu li a span {
+        display: none; /* Esconde los textos, solo dejarías íconos si usas */
+    }
+    
+    .admin-container {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        padding: 20px;
+    }
+    
+    .admin-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+/* Esconder las secciones inactivas */
+.tab-section {
+    display: none;
+}
+
+/* Mostrar únicamente la sección que tenga la clase active */
+.tab-section.active {
+    display: block;
+}
+
+/* Tarjetas extras del dashboard */
+.card-stat.stock { border-left-color: #f1934f; }
+.card-stat.alertas { border-left-color: #cd3d3d; }
+
+/* Estilos de badges para la columna de Estado del inventario */
+.badge-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.status-ok { background-color: #e8f8f5; color: #1e8449; }
+.status-alert { background-color: #fef9e7; color: #b7950b; animation: alertaParpadeo 1.5s infinite; }
+.status-empty { background-color: #fdedec; color: #a93226; }
+
+@keyframes alertaParpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Modificación para que el puntero cambie en menús dinámicos */
+.sidebar-menu li {
+    cursor: pointer;
+}
+
+
+
+
+
+

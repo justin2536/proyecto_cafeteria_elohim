@@ -1,0 +1,1481 @@
+body {
+    margin: 0; /* Esto quita el espacio blanco alrededor */
+    padding: 0;
+}
+
+
+
+header {
+    background-color: #8d4700;
+    color: white;
+    text-align: center;
+    padding: 50px 20px; 
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative; 
+}
+.logo-header {
+    position: absolute;
+    left: 40px;          /* Separación desde el borde izquierdo */
+    top: 50%;            /* Baja el logo al centro vertical */
+    transform: translateY(-50%); /* Centrado vertical exacto */
+    
+    /* El truco del tamaño: Usar el mismo ancho y alto obliga a que sea un cuadrado perfecto */
+    width: 130px;        
+    height: 130px;       
+    object-fit: cover;   /* Hace que el logo se adapte sin deformarse */
+    border-radius: 50%;  /* Corta las esquinas en un círculo perfecto */
+    border: 4px solid #00000094; /* El borde color crema de tu paleta (como un anillo elegante) */
+    
+    /* Sombra profesional para darle profundidad y despegargo del fondo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.774); 
+    
+    /* Suaviza cualquier transición por si luego quieres meterle un efecto hover */
+    transition: transform 0.3s ease; 
+}
+
+.logo-header:hover {
+    transform: translateY(-50%) scale(1.05); /* Se agranda un 5% suavemente */
+}
+
+
+
+header h2{
+    margin: 0; 
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.2; /* Le damos espacio entre líneas para que no se corte */
+}
+
+header p {
+    margin-top: 10px; /* Separamos un poco el eslogan del título */
+    font-size: 1.1rem;
+}
+
+
+
+nav {
+    background-color: #f1934f;
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos negros */
+    padding: 0;
+    margin: 0;
+    display: flex; /* ponemos los elementos en fila */
+    justify-content: center; 
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Separa los enlaces entre sí */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+}
+
+
+footer {
+    background-color: #2b1a0a; /* Un café muy oscuro, casi negro, más elegante */
+    color: white;
+    padding: 40px 20px; /* Más padding para que no se vea "pequeño" */
+    margin-top: 60px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las redes y el nombre */
+}
+
+/* Arreglando los enlaces de Redes Sociales */
+.social-links {
+    font-size: 1.1rem;
+}
+
+.social-links span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #f1934f; /* Usamos el naranja de tu Nav para que combine */
+    text-decoration: none; /* Quitamos la raya de abajo */
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f3e5c8; /* Color crema al pasar el mouse */
+}
+
+.divider {
+    color: #666;
+    margin: 0 10px;
+}
+
+/* Estilo para el Copyright */
+.copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+
+
+/* ==========================================================================
+   ESTILO EXCLUSIVO PARA CENTRAR EL LOGIN Y REGISTRO 
+   ========================================================================== */
+
+.cuerpo-login {
+    background-image: url('imagen/local.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Se asegura de tomar todo el alto de la pantalla */
+    
+    margin: 0;
+    padding: 20px; /* Un pequeño colchón para que en celulares no pegue a los bordes */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fondo-cafe {
+    background-image: url('imagen/local.jpg');
+background-size: cover;
+    background-position: center;
+    
+    background-attachment: fixed; /* Hace que el fondo se quede estático y se vea brutal al hacer scroll */
+    display: block; 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.63);
+  margin-bottom: 30px;
+  font-size: 2rem;
+ 
+}
+.login {
+    position: relative;
+    z-index: 2; /* Lo posiciona por encima de la capa oscura */
+    width: 90%;
+    max-width: 340px;
+    text-align: center;
+}
+.login h1 {
+    color: #ffffff;
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra para que se lea impecable */
+}
+.login a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px; 
+}
+button.login {
+    width: 100%;
+    background-color: #dacbcb;
+    color: #000000;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic; /* Letra cursiva como pediste */
+    border-radius: 12px; /* Esquinas redondeadas suaves */
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra que le da realce */
+    transition: all 0.2s ease-in-out;
+}
+/* Efectos al pasar el mouse por encima del botón */
+button.login:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.03); /* Se agranda un 3% suavemente */
+}
+
+/* Efecto cuando el usuario presiona el botón */
+button.login:active {
+    transform: scale(0.98);
+}
+/* INICIO SESION REGISTRARSE USUARIO
+
+/* Contenedor principal */
+.login-box {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.15); /* Fondo blanco con mucha transparencia */
+    backdrop-filter: blur(10px);           /* Difumina lo que está detrás (el truco del vidrio) */
+    -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Borde sutil brillante */
+    border-radius: 20px;                   /* Bordes redondeados más suaves */
+    padding: 30px;                         /* Espacio interno para que respire el formulario */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+}
+
+/* Etiquetas (Usuario / Contraseña) */
+label {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1.1rem;
+}
+
+/* Grupos de entrada  */
+.input-group {
+  background-color: #d9d9d9; /* Gris claro de la imagen */
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #b0b0b0; /* Marco sutil */
+     flex-direction: column;
+    background: rgba(255, 255, 255, 0.15); /* Fondo blanco con mucha transparencia */
+    backdrop-filter: blur(10px);           /* Difumina lo que está detrás (el truco del vidrio) */
+    -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Borde sutil brillante */
+    border-radius: 20px;                   /* Bordes redondeados más suaves */
+    padding: 30px;                         /* Espacio interno para que respire el formulario */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    width: 320px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+/* Botón Ingresar */
+.btn-ingresar {
+  background-color: #d9d9d9;
+  color: black;
+  border: 2px solid #b0b0b0;
+  border-radius: 12px;
+  padding: 15px;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+    display: block; /* Para que respete márgenes */
+    margin: 20px auto; /* Lo centra horizontalmente */
+   
+}
+
+
+/* eso es si no tiene cuents */
+.registro-text {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.registro-text a {
+  color: #00aaff; /* Azul claro para el enlace */
+  text-decoration: none;
+}
+
+/* CREAR CUENTA */
+.register-container {
+  width: 90%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif; /* Letra normal y limpia */
+      /* EFECTO GLASSMISM */
+    background: rgba(255, 255, 255, 0.15); /* Fondo blanco con mucha transparencia */
+    backdrop-filter: blur(10px);           /* Difumina lo que está detrás (el truco del vidrio) */
+    -webkit-backdrop-filter: blur(10px);   /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Borde sutil brillante */
+    border-radius: 20px;                   /* Bordes redondeados más suaves */
+    padding: 30px;                         /* Espacio interno para que respire el formulario */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    width: 320px;
+
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Etiquetas de los campos */
+label {
+  color: white;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* Cajas grises de los inputs */
+.input-group {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+/* El botón crema abajo del header */
+
+.btn-link-style {
+    display: block; 
+    width: 80%;
+    max-width: 280px;
+    margin: 20px auto; /* Lo centra horizontalmente */
+    background-color: #f3e5c8; 
+    color: black;
+    border-radius: 10px;
+    padding: 15px 0;
+    text-decoration: none;    /* Quita la raya azul de abajo */
+    text-align: center;       /* Centra el texto dentro */
+    
+    /* 4. Tipografía normal (Sans-serif) */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    /* 5. Efecto de clic */
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-link-style:hover {
+    background-color: #e6d5b3; /* Se oscurece un poco al pasar el mouse */
+}
+/*  PAGINA INICIO*/
+/* Contenedor principal que centra todo */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Esto separa los bloques para que no se vean maleados */
+    width: 95%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+
+/* CLASE PARA EL INICIO (Mantiene el diseño de tu captura) */
+.categorias-container-inicio {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: space-between;
+
+}
+
+/* CLASE PARA CAFÉ, POSTRES Y ANTOJOS (Ajustada para que no se rompa) */
+.categorias-container-productos {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Le damos más espacio a lo ancho */
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto; /* Lo separa del nav y lo centra */
+    padding: 0 20px;
+}
+
+/* El botón sigue siendo el mismo para ambos */
+.pill-button {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3e5c8;
+    color: black;
+    padding: 15px 0;
+    border-radius: 50px;
+    font-weight: bold;
+    flex: 1;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.pill-button:hover {
+    transform: scale(1.05);
+    background-color: #e6d5b3;
+}
+
+
+/*  CARRUSEL  CON DESLIZAMIENTO CONTROLADO */
+.carrusel-premium {
+    width: 100%;
+    height: 410px; /* Un poco más alto para que quepa bien el textonn */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid #f3e5c8; /* Un marco decente*/
+}
+
+.carrusel-slides-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Cada slider individual */
+.slide-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Escondidos por defecto - SÚPER IMPORTANTE */
+    transform: scale(0.95); /* Efecto sutil de tamaño al cambiar */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /*  duración del cambio */
+    z-index: 1;
+}
+
+/* Cuando el JavaScript le inyecta la clase activa */
+.slide-item.active {
+    opacity: 1; /* Se vuelve visible */
+    transform: scale(1);
+    z-index: 2; /* Sube de capa */
+}
+
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thanks-info h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #2b1a0a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.categorias-container {
+    display: flex;
+    width: 100%;
+    gap: 15px; /* Espacio entre botones */
+    justify-content: space-between;
+}
+
+.pill-button {
+    text-decoration: none; /* Quita la raya de abajo */
+    display: flex;         /* Ayuda a centrar el texto */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;          /* O el color de letra que prefieras */
+    
+    /* Mantén aquí el resto de tu código (background, border-radius, etc.) */
+    background-color: #f3e5c8;
+    padding: 15px 0;
+    border-radius: 50px;
+    font-weight: bold;
+    flex: 1;
+}
+
+/* Estilo para los cuadros grandes de abajo */
+.card-crema {
+    background-color: #f3e5c8;
+      color: #2b1a0ad3;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px; /* Bordes redondeados pero no circulares */
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.main-info p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.thanks-info h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #2b1a0a;
+}
+
+/*  cafe*/ 
+/* Contenedor principal */
+.productos-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-seccion {
+    color: #4b2c0c;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* La Grilla (Grid) */
+.grid-productos {
+    display: grid;
+    /* Crea 3 columnas iguales */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+/* Tarjeta de Producto */
+.producto-card {
+    background-color: #f3e5c8; /* Tu color crema */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px); /* Se eleva un poco al pasar el mouse */
+}
+
+/* Imagen del producto */
+.producto-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Hace que la foto no se estire feo */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    color: #2b1a0a;
+    margin: 10px 0;
+}
+
+.precio {
+    color: #8d4700;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Botón Agregar */
+.btn-agregar {
+    background-color: #f1934f; /* Tu naranja del Nav */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Botón ancho */
+}
+
+.btn-agregar:hover {
+    background-color: #d8762e;
+}
+
+
+
+
+
+
+
+/* Contenedor de Contacto */
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contacto-box {
+    background-color: #f3e5c8; /* Tu color crema */
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contacto-box h2 {
+    color: #2b1a0a;
+    margin-bottom: 10px;
+}
+
+.contacto-box p {
+    color: #4b2c0c;
+    margin-bottom: 30px;
+}
+
+/* Grupos del formulario */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #2b1a0a; /* Texto oscuro para que se lea bien en el crema */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b0b0b0;
+    border-radius: 10px;
+    background-color: #d9d9d9; /* Gris como tus otros inputs */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Evita que se salga del cuadro */
+}
+
+/* Botón de enviar */
+.btn-enviar {
+    background-color: #8d4700;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #4b2c0c;
+}
+
+
+.pagina-limpia{
+    background-color: rgba(252, 169, 181, 0.616);
+}
+
+
+/* ==========================================
+   ESTILOS DEL CARRITO DE COMPRAS 
+========================================== */
+
+/* Contenedor principal en dos columnas */
+.carrito-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Columna de productos ocupa el 65% */
+.carrito-productos {
+    flex: 2;
+    min-width: 320px;
+}
+
+/* Fila individual de cada producto */
+.producto-carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.producto-carrito-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-carrito-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.producto-carrito-info h3 {
+    margin: 0 0 5px 0;
+    color: #4a2c11; /* Tono café oscuro */
+    font-size: 1.1rem;
+}
+
+.producto-categoria {
+    margin: 0 0 5px 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.producto-precio {
+    font-weight: bold;
+    color: #4a2c11;
+}
+
+/* Controles de cantidad (+ / -) */
+.producto-carrito-cantidad {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 2px;
+    margin-right: 20px;
+}
+
+.btn-cantidad {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #4a2c11;
+    font-weight: bold;
+}
+
+.input-cantidad {
+    width: 35px;
+    text-align: center;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #4a2c11;
+    font-weight: bold;
+    -moz-appearance: textfield; /* Quita flechas nativas */
+}
+
+.input-cantidad::-webkit-outer-spin-button,
+.input-cantidad::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+    background: #ffeded;
+    border: none;
+    color: #e74c3c;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+    background: #fcd7d7;
+}
+/* ==========================================
+   NUEVO DISEÑO: TARJETA DE RESUMEN DEL CARRITO 
+========================================== */
+
+.carrito-resumen-tarjeta {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px; 
+    box-shadow: 0 10px 25px rgba(74, 44, 17, 0.06); /* Sombra suave con tono café */
+    border: 1px solid #f3ebe4; /* Borde sutil crema */
+    height: fit-content;
+}
+
+/* Título principal de la tarjeta */
+.resumen-titulo {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #4a2c11; /* Tu tono café oscuro */
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Líneas de información */
+.resumen-cuerpo {
+    padding: 5px 0;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.resumen-linea  {
+    color: #7a6e65;
+    font-size: 0.95rem;
+}
+
+.resumen-linea  {
+    color: #4a2c11;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* Separador elegante */
+.resumen-separador {
+    height: 1px;
+    background: linear-gradient(to right, #f3ebe4, #e6dcd3, #f3ebe4);
+    margin: 20px 0;
+}
+
+/* Fila del Total Neto Grande */
+.resumen-linea.total-neto {
+    margin-bottom: 25px;
+    color: #4a2c11;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.resumen-linea .precio-final {
+    font-size: 1.5rem; /* El total resalta bastante más */
+    font-weight: 800;
+    color: #f1934f; /* Tu color naranja/miel llamativo */
+}
+
+/* Botón Principal Estilizado */
+.btn-proceder-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-color: #4a2c11;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px; /* Estilo píldora */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(74, 44, 17, 0.15);
+}
+
+.btn-proceder-pago:hover {
+    background-color: #f1934f; /* Cambia a tu color secundario al pasar el mouse */
+    box-shadow: 0 6px 18px rgba(241, 147, 79, 0.3);
+    transform: translateY(-2px); /* Pequeño efecto de flotado */
+}
+
+.btn-proceder-pago .flecha-icono {
+    font-style: normal;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-proceder-pago:hover .flecha-icono {
+    transform: translateX(4px); /* La flecha se mueve un poquito a la derecha */
+}
+
+/* Enlace para volver atrás */
+.btn-regresar-tienda {
+    display: block;
+    text-align: center;
+    color: #7a6e65;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: color 0.2s;
+}
+
+.btn-regresar-tienda:hover {
+    color: #f1934f;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   CSS EXCLUSIVO PARA EL PANEL DE ADMINISTRACIÓN (ADMIN.CSS)
+   ========================================================================== */
+
+/* 1. Fondos de página */
+.fondo-cafe-admin {
+    background-image: url('imagen/local.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+     display: block; /* Cambiado de flex a block para que header/footer no se destruyan */
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.pagina-limpia-admin {
+    background-color: #fdfbf7; /* Tono crema claro de fondo */
+}
+
+
+
+/* 3. Contenedor Principal (Wrapper de Admin) */
+.main-wrapper-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; 
+    width: 95%;
+    max-width: 650px; /* Lo subí de 500px a 650px para darle más aire al diseño */
+    margin: 40px auto;
+}
+
+/* 4. Botones de Categorías (Pills Admin) */
+.categorias-container-inicio-admin{
+    
+        display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: space-between;
+
+}
+.categorias-container-productos-admin {
+   /* display: flex;
+    width: 100%;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px; */
+
+        display: flex;
+    width: 100%;
+    max-width: 800px; /* Le damos más espacio a lo ancho */
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto; /* Lo separa del nav y lo centra */
+    padding: 0 20px;
+
+
+}
+
+.pill-button-admin {
+        text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3e5c8;
+    color: black;
+    padding: 15px 0;
+    border-radius: 50px;
+    font-weight: bold;
+    flex: 1;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.pill-button-admin:hover {
+    transform: scale(1.05);
+    background-color: #e6d5b3;
+}
+
+/* 5. Carrusel de Fotos Admin */
+/* 5. Carrusel de Fotos Admin */
+.carrusel-premium-admin {
+    width: 100%;
+    height: 410px; /* Mantiene tu alto base */
+    max-height: 50vh; /* Evita que en pantallas chicas se estire de más */
+    position: relative;
+    overflow: hidden; /* SÚPER IMPORTANTE: Corta cualquier desborde */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border: 2px solid #f3e5c8; 
+}
+
+
+.carrusel-slides-container-admin {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-item-admin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Escondidos por defecto - SÚPER IMPORTANTE */
+    transform: scale(0.95); /* Efecto sutil de tamaño al cambiar */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Esta es la duración del cambio */
+    z-index: 1;
+        object-fit: cover;
+            display: block; /* Quita espacios fantasmas abajo de la imagen */
+    
+}
+
+
+/* Clases activas para el script de transición */
+.slide-item-admin.active{
+       opacity: 1; /* Se vuelve visible - SÚPER IMPORTANTE */
+    transform: scale(1);
+    z-index: 2; /* Sube de capa */
+}
+
+
+.slide-item-admin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-producto-tag-admin {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(43, 26, 10, 0.85); /* Fondo café oscuro */
+    border: 1px solid #f1934f;
+    padding: 8px 15px;
+    width: auto;
+    max-width: calc(100% - 40px);
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    z-index: 3;
+    
+    /* NUEVOS ESTILOS PARA EL BOTÓN */
+    text-decoration: none; /* Quita la raya azul fea de los enlaces */
+    display: block;        /* Para que respete el padding correctamente */
+    cursor: pointer;       /* Hace que aparezca la manito del mouse */
+    transition: all 0.2s ease-in-out; /* Suaviza el efecto hover */
+}
+
+
+.info-producto-tag-admin:hover {
+    background: rgba(66, 37, 7, 0.95); /* Cambia a tu color café del header */
+    border-color: #f3e5c8;               /* El borde se vuelve crema */
+    transform: scale(1.03);  
+}
+.info-producto-tag-admin h3 {
+    margin: 0 0 2px 0;
+    color: #f3e5c8;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.precio-tag-admin {
+    margin: 0;
+    color: #e99b26;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* 6. Tarjetas Informativas Admin */
+.card-crema.main-info-admin {
+        background-color: #f3e5c8;
+    color: #2b1a0a;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+ 
+
+} 
+.card-crema.main-info-admin p {
+            margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+.card-crema.thanks-info-admin  {
+    background-color: #f3e5c8;
+    color: #2b1a0a;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+       margin: 0;
+    font-size: 1.6rem;
+    color: #2b1a0a;
+
+
+
+
+
+}
+.card-crema.thanks-info-admin h2{
+          margin: 0;
+    font-size: 1.6rem;
+    color: #2b1a0a;
+
+
+}
+
+/* 7. Grid de Productos y Catálogo Admin */
+.productos-container-admin {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-seccion-admin {
+    color: #4b2c0c;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.grid-productos-admin {
+    display: grid;
+    /* Crea 3 columnas iguales */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+.producto-card-admin {
+    background-color: #f3e5c8; /* Tu color crema */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.producto-card-admin:hover {
+    transform: translateY(-5px); /* Se eleva un poco al pasar el mouse */
+}
+.producto-card-admin h3 {
+    color: #2b1a0a;
+    margin: 10px 0;
+}
+
+.producto-img-admin {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Hace que la foto no se estire feo */
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.precio-admin {
+    color: #8d4700;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-agregar-admin {
+    background-color: #f1934f; /* Tu naranja del Nav */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Botón ancho */
+}
+.btn-agregar-admin:hover {
+    background-color: #d8762e;
+}
+
+/* 8. Footer Admin */
+
+
+.footer-content-admin {
+        max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las redes y el nombre */
+}
+
+/* Arreglando los enlaces de Redes Sociales */
+.social-links-admin {
+    font-size: 1.1rem;
+}
+
+.social-links-admin span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.social-links-admin a {
+    color: #f1934f; /* Usamos el naranja de tu Nav para que combine */
+    text-decoration: none; /* Quitamos la raya de abajo */
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.social-links-admin a:hover {
+    color: #f3e5c8; /* Color crema al pasar el mouse */
+}
+
+.divider-admin {
+    color: #666;
+    margin: 0 10px;
+}
+
+/* Estilo para el Copyright */
+.copyright-admin p {
+    margin: 0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+
+
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA OPTIMIZADA PARA CAFÉ ELOHIM (MÓVIL)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. CAMBIO RECOMENDADO: Fondo más acorde a la paleta (Adiós rosa chillante) */
+    .pagina-limpia {
+        background-color: rgba(252, 169, 181, 0.637) !important; /* Un crema súper limpio y elegante */
+    }
+
+    /* 2. Header centrado y con espacio */
+    header {
+        padding: 40px 15px 25px 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    header h2 {
+        font-size: 1.8rem !important; /* Tamaño ideal para móvil */
+        margin-top: 100px !important; /* Deja espacio para el logo arriba */
+    }
+
+    header p {
+        font-size: 0.95rem !important;
+        padding: 0 10px;
+    }
+
+    /* Logo perfectamente centrado como un anillo arriba */
+    .logo-header {
+        position: absolute !important;
+        left: 50% !important;
+        top: 20px !important;
+        transform: translateX(-50%) !important;
+        width: 95px !important;        
+        height: 95px !important;
+    }
+
+    .logo-header:hover {
+        transform: translateX(-50%) scale(1.05) !important;
+    }
+
+    /* 3. Navegación compacta en fila (Para que no ocupe media pantalla) */
+    nav {
+        padding: 8px 0 !important;
+    }
+
+    nav ul {
+        flex-direction: row !important; /* Mantenemos la fila */
+        justify-content: center !important;
+        flex-wrap: wrap; /* Si no caben, bajan sutilmente */
+        gap: 12px !important;
+    }
+
+    nav ul li {
+        margin: 0 !important;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem !important; /* Un toque más pequeño para celular */
+    }
+
+    /* 4. Botones de Categorías (Pills) en Fila de 3 (Como en tu imagen 2, pero adaptables) */
+    .categorias-container-inicio,
+    .categorias-container-productos,
+    .categorias-container-productos-admin,
+    .categorias-container-inicio-admin {
+        flex-direction: row !important; /* ¡En fila para que no parezcan ladrillos apilados! */
+        gap: 8px !important;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .pill-button,
+    .pill-button-admin {
+        font-size: 0.85rem !important; /* Más compacto para que quepan los 3 en horizontal */
+        padding: 10px 0 !important;
+        flex: 1 !important;
+    }
+
+    /* 5. Contenedores de Formularios (Login, Registro y Contacto) */
+    .login-box, 
+    .register-container,
+    .contacto-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 20px !important; /* Menos padding interno para ganar pantalla */
+    }
+    
+    .input-group {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 6. Grilla de Productos y Carrusel */
+    .grid-productos,
+    .grid-productos-admin {
+        grid-template-columns: 1fr !important; /* Un producto por fila en celular */
+        gap: 20px !important;
+    }
+
+    .producto-img,
+    .producto-img-admin {
+        height: 300px !important;
+    }
+
+    .carrusel-premium,
+    .carrusel-premium-admin {
+        height: 250px !important;
+    }
+
+    /* 7. Ajustes del Carrito */
+    .carrito-main-container {
+        flex-direction: column !important;
+    }
+
+    .producto-carrito-item {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 10px !important;
+    }
+}

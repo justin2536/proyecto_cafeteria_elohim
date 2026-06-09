@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Carrito Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+            <img src="imagen/logo.png" alt="Logo Cafe Elohim" class="logo-header">
+        <h2> Cafe Elohim </h2>
+        <p> En cada sabor del cafe de la Casa Elohim descubre el alma de nuestra tierra</p>
+    </header>
+<nav> 
+    <ul>
+        <li><a href="/inicio_pagina">Inicio</a></li>
+        <li><a href="/productos">Productos</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/carrito">Carrito</a></li> 
+    </ul>
+</nav>
+    
+<body class="pagina-limpia"> 
+    <div class="categorias-container-productos">
+        <a href="/cafe" class="pill-button" >Cafe</a>
+        <a href="/postre" class="pill-button">Postres</a>
+        <a href="/antojo" class="pill-button">Antojos</a>
+    </div>
+
+
+<h2 class="titulo-seccion">Tus Productos en el Carrito</h2>
+
+    <div class="carrito-main-container">
+        
+        <div class="carrito-productos">
+            
+            <div class="producto-carrito-item">
+                <img src="imagen/capuchino.jpg" alt="Café Tradicional" class="producto-carrito-img">
+                <div class="producto-carrito-info">
+                    <h3>Café Artesanal Premium</h3>
+                    <p class="producto-categoria">Categoría: Café</p>
+                    <span class="producto-precio">$4.50</span>
+                </div>
+                <div class="producto-carrito-cantidad">
+                    <button class="btn-cantidad">-</button>
+                    <input type="number" value="1" min="1" class="input-cantidad">
+                    <button class="btn-cantidad">+</button>
+                </div>
+                <button class="btn-eliminar" title="Eliminar producto">
+                    <i>&times;</i> </button>
+            </div>
+
+            <div class="producto-carrito-item">
+                <img src="imagen/postre-ejemplo.jpg" alt="Postre de la casa" class="producto-carrito-img">
+                <div class="producto-carrito-info">
+                    <h3>Tres Leches de Café</h3>
+                    <p class="producto-categoria">Categoría: Postres</p>
+                    <span class="producto-precio">$3.00</span>
+                </div>
+                <div class="producto-carrito-cantidad">
+                    <button class="btn-cantidad">-</button>
+                    <input type="number" value="2" min="1" class="input-cantidad">
+                    <button class="btn-cantidad">+</button>
+                </div>
+                <button class="btn-eliminar" title="Eliminar producto">
+                    <i>&times;</i>
+                </button>
+            </div>
+
+        </div>
+        <div class="carrito-resumen-tarjeta">
+    <h3 class="resumen-titulo">Resumen de Orden</h3>
+    
+    <div class="resumen-cuerpo">
+    </div>
+
+
+    <div class="resumen-separador"></div>
+
+<div class="resumen-linea total-neto">
+    <span>Total a Pagar:</span>
+    <span class="precio-final" id="total-neto-final">C$ 0.00</span> 
+</div>
+    
+    <button class="btn-proceder-pago">
+        <span>Confirmar Pedido</span>
+        <i class="flecha-icono">&rarr;</i>
+    </button>
+    
+    <a href="/productos" class="btn-regresar-tienda">← Seguir ordenando</a>
+</div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+<footer>
+  <div class="footer-content">
+    <div class="social-links">
+      <span>Redes sociales:</span>
+
+      <a href="https://tiktok.com/@jamil_pantoja">Tik Tok</a> 
+
+      <a href="https://www.instagram.com/jamil_pantoja?igsh=N2pwaGx6bTF0dGpw">Instagram</a>
+
+      <span class="divider"></span>
+      <a href="https://github.com/justin2536">Git-Hub</a>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2026 Justin Jamil Pantoja Chavarria</p>
+    </div>
+  </div>
+  </footer>
+</html>
